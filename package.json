@@ -1,0 +1,52 @@
+{
+  "name": "ev-client",
+  "version": "0.0.1",
+  "description": "A desktop app for ev.io",
+  "main": "app/main.js",
+  "build": {
+    "appId": "com.lukegraham.evio",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "NSIS"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "grahamluke",
+        "repo": "eviodesktop"
+      }
+    ]
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --publish always --win --mac --linux --x64 --arm64"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grahamluke/eviodesktop.git"
+  },
+  "author": "Luke Graham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grahamluke/eviodesktop/issues"
+  },
+  "homepage": "https://github.com/grahamluke/eviodesktop#readme",
+  "devDependencies": {
+    "electron": "^16.0.1",
+    "electron-builder": "^22.14.5"
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.23.0",
+    "@electron/remote": "^2.0.1",
+    "discord-rich-presence": "^0.0.8",
+    "electron-localshortcut": "^3.2.1",
+    "electron-store": "^8.0.1",
+    "electron-updater": "^4.6.1"
+  }
+}
