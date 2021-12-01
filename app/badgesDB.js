@@ -18,7 +18,7 @@ async function fetchBadgesDB() {
     console.log(globalThis.username)
     if(globalThis.respectedBadgeDB.includes(globalThis.username)) {
         console.log('does have badge')
-        ipcRenderer.send('badge', 'dev')
+        ipcRenderer.send('badge', 'respected')
     }
 }
 module.exports = {
