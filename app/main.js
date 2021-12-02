@@ -38,7 +38,7 @@ function createWindow() {
             nodeIntegration: false
             , webSecurity: false
             , contextIsolation: false
-            , devTools: false
+            , devTools: true
             , preload: __dirname.concat('/preload.js')
         }
     });
