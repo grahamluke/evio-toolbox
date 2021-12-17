@@ -58,8 +58,10 @@ function createWindow() {
         autoUpdater.quitAndInstall();
     });
     win.on("new-window", function(event, url) {
+    if(win.webContents.getURL() !== 'https://ev.io/') {
         event.preventDefault();
         shell.openExternal(url);
+    }
     });
     
     function clearCache() {
