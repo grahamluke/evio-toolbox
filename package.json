@@ -1,24 +1,27 @@
 {
-  "name": "ev-client",
-  "version": "0.0.2",
+  "name": "evio-toolbox",
+  "version": "0.0.3",
   "description": "A desktop app for ev.io",
   "main": "app/main.js",
   "build": {
     "appId": "com.lukegraham.evio",
     "mac": {
-      "target": "dmg"
+      "target": "dmg",
+      "icon": "app/icon.png"
     },
     "win": {
-      "target": "NSIS"
+      "target": "NSIS",
+      "icon": "app/icon.png"
     },
     "linux": {
-      "target": "AppImage"
+      "target": "AppImage",
+      "icon": "app/icon.png"
     },
     "publish": [
       {
         "provider": "github",
         "owner": "grahamluke",
-        "repo": "eviodesktop"
+        "repo": "evio-toolbox"
       }
     ]
   },
@@ -29,14 +32,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/grahamluke/eviodesktop.git"
+    "url": "git+https://github.com/grahamluke/evio-toolbox.git"
   },
   "author": "Luke Graham",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/grahamluke/eviodesktop/issues"
+    "url": "https://github.com/grahamluke/evio-toolbox/issues"
   },
-  "homepage": "https://github.com/grahamluke/eviodesktop#readme",
+  "homepage": "https://github.com/grahamluke/evio-toolbox#readme",
   "devDependencies": {
     "electron": "^16.0.1",
     "electron-builder": "^22.14.5"
@@ -48,6 +51,7 @@
     "discord-rich-presence": "^0.0.8",
     "electron-localshortcut": "^3.2.1",
     "electron-store": "^8.0.1",
-    "electron-updater": "^4.6.1"
+    "electron-updater": "^4.6.1",
+    "v8-compile-cache": "^2.3.0"
   }
 }

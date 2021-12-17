@@ -1,3 +1,4 @@
+require('v8-compile-cache');
 const {
     app
     , BrowserWindow
@@ -44,10 +45,11 @@ function createWindow() {
     });
     
     win.loadURL('https://ev.io/');
-    Menu.setApplicationMenu(null);
+   // Menu.setApplicationMenu(null);
     win.once('ready-to-show', () => {
         autoUpdater.checkForUpdatesAndNotify();
     });
+    console.log(config.get('discordRPC'))
     autoUpdater.on('update-available', () => {
         win.webContents.executeJavaScript(`alert('Client update available. Downloading the update now.')`);
     });

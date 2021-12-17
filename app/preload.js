@@ -1,3 +1,4 @@
+require('v8-compile-cache');
 const {
     fetchBadgesDB
 } = require('./badgesDB')

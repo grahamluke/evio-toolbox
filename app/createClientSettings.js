@@ -58,7 +58,7 @@ function createClientSettings() {
             document.getElementById("client-settings-extension").style.display = "none";
         };
     }
-    links_center.insertAdjacentHTML('beforeend', `<button type="button" id="client-settings-button" onclick={window.openSettings()} class="btn translate-me" style=background-color:#b227c3>Client Settings</button>`)
+    links_center.insertAdjacentHTML('beforeend', `<button type="button" id="client-settings-button" onclick={window.openSettings()} class="btn translate-me" style=background-color:#b227c3>Toolbox</button>`)
     window.setFPS = function() {
         config.set('uncappedFPS', uncappedFPS.checked);
     }
